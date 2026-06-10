@@ -1,17 +1,35 @@
 ---
-
+// Frontend/Component Script (Espacio de TypeScript)
+const name = "Germán";
+const role = "Software Engineer Student & Backend Developer";
+const sub = "Técnico Superior en DAM y estudiante de Ingeniería Informática. Especializado en el ecosistema Java / Spring Boot.";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Portfolio - {name}</title>
+    <style>
+      /* Unos estilos CSS rápidos y limpios para que no se vea feo mientras desarrollamos */
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        background-color: #0f172a;
+        color: #f8fafc;
+        max-width: 800px;
+        margin: 100px auto;
+        padding: 0 20px;
+      }
+      h1 { color: #38bdf8; font-size: 2.5rem; margin-bottom: 0.5rem; }
+      h2 { color: #94a3b8; font-size: 1.5rem; font-weight: 400; margin-top: 0; }
+      p { color: #cbd5e1; line-height: 1.6; font-size: 1.1rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Hola, soy {name} 👋</h1>
+      <h2>{role}</h2>
+      <p>{sub}</p>
+    </main>
+  </body>
 </html>
