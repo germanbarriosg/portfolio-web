@@ -19,7 +19,7 @@
   {
     "id": 3,
     "title": "Portfolio personal alojado en la web que estás visualizando",
-    "type": "Diseño de Arquitectura",
+    "type": "Diseño de sistema modular basado en componentes",
     "description": "Soy un maquina",
     "stack": ["Astro", "HTML", "CSS", "JSON"],
     "year": 2026

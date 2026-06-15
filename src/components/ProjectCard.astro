@@ -1,0 +1,43 @@
+---
+// src/components/ProjectCard.astro
+
+// Definimos los tipos de datos que este componente espera recibir (Props)
+interface Props {
+  title: string;
+  type: string;
+  description: string;
+  stack: string[];
+  year: number;
+}
+
+// Extraemos las propiedades que nos pasa el padre
+const { title, type, description, stack, year } = Astro.props;
+---
+
+<article class="project-card">
+  <span class="project-type">{type}</span>
+  <h4 class="project-title">{title} ({year})</h4>
+  <p>{description}</p>
+  
+  <div class="tag-container">
+    {stack.map((tech) => (
+      <span class="tag">{tech}</span>
+    ))}
+  </div>
+</article>
+
+<style>
+  /* Trasladamos los estilos específicos de la tarjeta aquí. 
+     En Astro, el CSS es 'scoped': ¡estos estilos SOLO afectan a este componente! */
+  .project-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .project-title { color: #f8fafc; margin: 0 0 0.5rem 0; font-size: 1.25rem; }
+  .project-type { color: #38bdf8; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: bold; }
+  .tag-container { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+  .tag { background-color: #334155; color: #cbd5e1; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.85rem; }
+</style>
