@@ -2,59 +2,46 @@
 // 1. ESPACIO DE INGENIERÍA (Backend de Astro) Solo se ejecuta en el servidor.
 // Importamos nuestro JSON directamente.  
 // lo convierte automáticamente en un array de objetos TypeScript.
-import projectsData from '../data/projects.json';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import projectsData from '../data/projects.json';
+import AboutMe from '../components/AboutMe.astro';
+import SocialLinks from '../components/SocialLinks.astro';
 
 const name = "Germán";
 const role = "Software Engineer Student & Backend Developer";
-const sub = "Técnico Superior en DAM y estudiante de Ingeniería Informática. Especializado en el ecosistema Java / Spring Boot. Sigo una arquitectura limpia y me gusta automatizar cosas.";
+const sub = "Técnico Superior en DAM y estudiante de Ingeniería Informática. Especializado en el ecosistema Java / Spring Boot.";
 ---
 
-<!-- 2. ESPACIO DE VISTA (HTML + CSS) -->
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Portfolio - {name}</title>
-    <style>
-      body {
-        font-family: system-ui, -apple-system, sans-serif;
-        background-color: #0f172a;
-        color: #f8fafc;
-        max-width: 800px;
-        margin: 60px auto;
-        padding: 0 20px;
-      }
-      header { border-bottom: 1px solid #334155; padding-bottom: 2rem; margin-bottom: 2rem; }
-      h1 { color: #38bdf8; font-size: 2.5rem; margin-bottom: 0.5rem; }
-      h2 { color: #94a3b8; font-size: 1.5rem; font-weight: 400; margin-top: 0; }
-    </style>
-  </head>
-  <body>
-    
-    <header>
-      <h1>Hola, soy {name} 👋</h1>
-      <h2>{role}</h2>
-      <p>{sub}</p>
-    </header>
-
-    <main>
-      <h3>Proyectos Destacados</h3>
+<!-- 2. ESPACIO DE VISTA (HTML + CSS) Importado -->
+<BaseLayout title={`Portfolio - ${name}`}>
+  
+  <header>
+    <h1>Hola, soy {name} 👋</h1>
+    <h2>{role}</h2>
+    <p>{sub}</p>
+    <SocialLinks>
       
-      <!-- LA MAGIA DE LA ITERACIÓN: 
-           Recorremos el array 'projectsData'. Por cada 'project', 
-           Astro renderizará este bloque HTML automáticamente. -->
-      {projectsData.map((project) => (
-        <ProjectCard
-          title={project.title}
-          type={project.type}
-          description={project.description}
-          stack={project.stack}
-          year={project.year}
-        />
-      ))}
+    </SocialLinks>
 
-    </main>
+  </header>
 
-  </body>
-</html>
+  <main>
+    <AboutMe>
+      {AboutMe}
+    </AboutMe>
+
+    <h3>Proyectos Destacados</h3>
+    
+    {projectsData.map((project) => (
+      <ProjectCard 
+        title={project.title}
+        type={project.type}
+        description={project.description}
+        stack={project.stack}
+        year = {project.year}
+      />
+    ))}
+  </main>
+
+</BaseLayout>
