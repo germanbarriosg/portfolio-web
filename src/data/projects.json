@@ -1,27 +1,26 @@
 [
-  {
+ {
     "id": 1,
     "title": "La Flor de la Mancha",
-    "type": "MVP Funcional",
-    "description": "Sistema de gestión interna para agrupaciones musicales. Integración de un backend empresarial robusto con un cliente móvil, abordando un análisis real sobre gestión de deuda técnica.",
+    "type": "Aplicación Completa (MVP)",
+    "description": "Un sistema real para gestionar el día a día de agrupaciones musicales. Desarrollé toda la lógica del servidor con Java y Spring Boot, y creé una aplicación móvil con Flutter para que los miembros puedan acceder fácilmente a la información. Visualizar eventos y confirmar asistencia",
     "stack": ["Java", "Spring Boot", "MySQL", "Flutter"],
-    "year": 2025
-    
+    "year": "2025"
   },
   {
     "id": 2,
-    "title": "TPV Hostelería & Comandas",
-    "type": "Diseño de Arquitectura",
-    "description": "Caso de estudio técnico para hostelería. Arquitectura Full-Stack diseñada para alta concurrencia y estrés en barra, garantizando transacciones consistentes.",
-    "stack": ["NestJS", "React", "PostgreSQL", "Docker"],
-    "year": 2026
+    "title": "Mi Portfolio Web Profesional",
+    "type": "Desarrollo Web Modular",
+    "description": "Desarrollo de este sitio web utilizando Astro para lograr una velocidad de carga excelente. Organicé el proyecto separando los datos en un archivo JSON para que sea muy fácil de actualizar, y configuré la subida automática a este dominio cada vez que actualizo el código en GitHub.",
+    "stack": ["Astro", "TypeScript", "HTML/CSS", "Vercel"],
+    "year": "2026"
   },
   {
     "id": 3,
-    "title": "Portfolio personal alojado en la web que estás visualizando",
-    "type": "Diseño de sistema modular basado en componentes",
-    "description": "Soy un maquina",
-    "stack": ["Astro", "HTML", "CSS", "JSON"],
-    "year": 2026
+    "title": "TPV Hostelería & Comandas",
+    "type": "Idea / Concepto Técnico",
+    "description": "Un proyecto que tengo diseñado sobre el papel uniendo mi experiencia en hostelería con el desarrollo de software. El objetivo es diseñar un sistema de gestión de pedidos y pagos para bares y restaurantes, con una interfaz intuitiva y funcionalidades avanzadas para optimizar el flujo de trabajo del personal.",
+    "stack": ["NestJS", "React", "PostgreSQL", "Docker"],
+    "year":  "En fase de diseño"
   }
 ]
